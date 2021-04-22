@@ -1,4 +1,5 @@
 import consumer from "./consumer";
+import { scroll_bottom } from "../packs/chatroom_helper";
 
 consumer.subscriptions.create("ChatroomChannel", {
   connected() {
@@ -15,8 +16,11 @@ consumer.subscriptions.create("ChatroomChannel", {
     // document.getElementById("message-container").append(`${data.new_message}`);
     // document.getElementById("message-container").append(data.new_message);
     // $("#message-container").append(data.partial);
+
     document
       .querySelector("#message-container")
       .insertAdjacentHTML("beforeend", data.partial);
+
+    scroll_bottom();
   },
 });
