@@ -10,13 +10,16 @@
       <div class="content">
         <div class="ui feed">
 
-          <div class="event">
-            <div class="content">
-              <div class="summary">
-                <em>Christian Rocha</em>: Test message
+          <% @messages.each do |message| %>
+            <div class="event">
+              <div class="content">
+                <div class="summary">
+                  <!-- <em>Christian Rocha</em>: Test message -->
+                  <%= message.user.username %>: <%= message.body %>
+                </div>
               </div>
             </div>
-          </div>
+          <% end %>
           
         </div>
       </div>
