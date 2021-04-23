@@ -1,5 +1,5 @@
 import consumer from "./consumer";
-import { scroll_bottom } from "../packs/chatroom_helper";
+import { scroll_bottom, clear_input } from "../packs/chatroom_helper";
 
 consumer.subscriptions.create("ChatroomChannel", {
   connected() {
@@ -21,6 +21,7 @@ consumer.subscriptions.create("ChatroomChannel", {
       .querySelector("#message-container")
       .insertAdjacentHTML("beforeend", data.partial);
 
+    clear_input();
     scroll_bottom();
   },
 });

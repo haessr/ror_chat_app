@@ -8,7 +8,7 @@ import Turbolinks from "turbolinks";
 import * as ActiveStorage from "@rails/activestorage";
 import "channels";
 import "semantic-ui-sass";
-import { scroll_bottom } from "./chatroom_helper";
+import { scroll_bottom, submit_message } from "./chatroom_helper";
 
 // require("semantic-ui-sass");
 
@@ -30,4 +30,5 @@ $(document).on("turbolinks:load", function () {
   });
 
   scroll_bottom();
+  submit_message();
 });
