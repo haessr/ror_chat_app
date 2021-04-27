@@ -29,6 +29,6 @@ $(document).on("turbolinks:load", function () {
     $(this).closest(".message").transition("fade");
   });
 
-  scroll_bottom();
   submit_message();
+  scroll_bottom();
 });

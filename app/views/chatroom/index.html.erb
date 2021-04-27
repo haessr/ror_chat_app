@@ -14,7 +14,7 @@
       </div>
 
       <div class="extra content">
-        <%= form_with model: Message.new, url: message_path, class: "ui reply form" do |form| %>
+        <%= form_with model: Message.new, url: message_path, local: false, class: "ui reply form" do |form| %>
         <!-- <form class="ui reply form"> -->
           <div class="field">
             <div class="ui fluid icon input">
